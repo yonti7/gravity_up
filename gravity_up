@@ -1,14 +1,14 @@
-	spawn(function()
-	while true do
-		game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
-		game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
-		game:GetService("RunService").Stepped:wait()
-	end
+spawn(function()
+    while true do
+        game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
+        game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
+        game:GetService("RunService").Stepped:wait()
+    end
 end)
 local function zeroGrav(part)
     if part:FindFirstChild("BodyForce") then return end
     local temp = Instance.new("BodyForce")
-    temp.Force = part:GetMass() * Vector3.new(0,workspace.Gravity*-100,0)
+    temp.Force = part:GetMass() * Vector3.new(0,250,0)
     temp.Parent = part
 end
 
