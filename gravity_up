@@ -10,7 +10,7 @@ LocalPlayer.SimulationRadiusChanged:Connect(function(radius)
    radius = 9e9
    return radius
 end)
-		spawn(function()
+	spawn(function()
 	while true do
 		game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
 		game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
