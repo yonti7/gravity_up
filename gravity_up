@@ -8,7 +8,7 @@ end)
 local function zeroGrav(part)
     if part:FindFirstChild("BodyForce") then return end
     local temp = Instance.new("BodyForce")
-    temp.Force = part:GetMass() * Vector3.new(-10,workspace.Gravity,-10)
+    temp.Force = part:GetMass() * Vector3.new(0,workspace.Gravity,0)
     temp.Parent = part
 end
 
